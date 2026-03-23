@@ -14,36 +14,33 @@
   input[type=range]::-moz-range-thumb { width: 22px; height: 22px; border-radius: 50%; background: #fff; border: 2px solid #4a8fa8; cursor: pointer; }
   .slider-ticks { display: flex; justify-content: space-between; font-size: 11px; color: #9aacb8; margin-top: 6px; margin-bottom: 1.5rem; }
   .section-divider { border: none; border-top: 1px solid #dce6ec; margin: 1.25rem 0; }
-  .product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 1.25rem; }
-  .product-card { background: #fff; border-radius: 12px; border: 1.5px solid #dce6ec; padding: 1rem 1.1rem; }
-  .pc-header { display: flex; align-items: center; gap: 8px; margin-bottom: 0.75rem; }
-  .pc-icon { font-size: 18px; }
-  .pc-title { font-size: 13px; font-weight: 600; color: #1a2530; }
-  .pc-bench-label { font-size: 10px; color: #9aacb8; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 3px; }
-  .pc-bench-val { font-size: 26px; font-weight: 700; color: #1a2530; margin-bottom: 0.75rem; line-height: 1; }
-  .pc-input-wrap { position: relative; }
-  .pc-input-wrap input[type=number] { width: 100%; background: #f0f5f8; border: 1.5px solid #dce6ec; border-radius: 8px; padding: 0.5rem 2.8rem 0.5rem 0.75rem; font-size: 16px; font-weight: 600; color: #1a2530; outline: none; transition: border-color 0.15s; }
+  .product-stack { display: flex; flex-direction: column; gap: 14px; margin-bottom: 1rem; }
+  .product-card { background: #fff; border-radius: 12px; border: 1.5px solid #dce6ec; padding: 1.25rem 1.5rem; }
+  .pc-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 1rem; }
+  .pc-header { display: flex; align-items: center; gap: 8px; }
+  .pc-icon { font-size: 20px; }
+  .pc-title { font-size: 15px; font-weight: 600; color: #1a2530; }
+  .pc-bench-block { text-align: right; }
+  .pc-bench-label { font-size: 10px; color: #9aacb8; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2px; }
+  .pc-bench-val { font-size: 30px; font-weight: 700; color: #1a2530; line-height: 1; }
+  .pc-input-wrap { position: relative; margin-bottom: 0.75rem; }
+  .pc-input-wrap input[type=number] { width: 100%; background: #f0f5f8; border: 1.5px solid #dce6ec; border-radius: 8px; padding: 0.6rem 3rem 0.6rem 0.85rem; font-size: 18px; font-weight: 600; color: #1a2530; outline: none; transition: border-color 0.15s; }
   .pc-input-wrap input[type=number]:focus { border-color: #4a8fa8; background: #fff; }
-  .pc-input-wrap input[type=number]::placeholder { color: #c0cdd6; font-weight: 400; font-size: 14px; }
-  .pc-input-wrap .sfx { position: absolute; right: 0.6rem; top: 50%; transform: translateY(-50%); font-size: 11px; color: #9aacb8; pointer-events: none; }
+  .pc-input-wrap input[type=number]::placeholder { color: #c0cdd6; font-weight: 400; font-size: 15px; }
+  .pc-input-wrap .sfx { position: absolute; right: 0.75rem; top: 50%; transform: translateY(-50%); font-size: 12px; color: #9aacb8; pointer-events: none; }
   input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
-  .status-badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 500; margin-top: 6px; }
+  .status-badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 500; margin-bottom: 8px; }
   .badge-above { background: #e8f5e0; color: #3a7a1a; }
   .badge-below { background: #fef0e0; color: #a05a10; }
   .badge-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
   .badge-above .badge-dot { background: #5a9e3a; }
   .badge-below .badge-dot { background: #d4813a; }
-  .result-panel { background: #3a3a2e; border-radius: 12px; padding: 1.25rem 1.5rem; }
-  .rp-label { font-size: 10px; letter-spacing: 0.1em; color: #888; text-transform: uppercase; margin-bottom: 0.9rem; }
-  .rp-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
-  .rp-col .rc-label { font-size: 10px; color: #888; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 3px; }
-  .rp-col .rc-val { font-size: 24px; font-weight: 700; color: #c8a84b; }
-  .rp-col .rc-sub { font-size: 11px; color: #666; margin-top: 2px; }
-  .rb { border-top: 1px solid #4a4a3a; padding-top: 0.85rem; font-size: 13px; }
-  .rb-row { display: flex; justify-content: space-between; color: #aaa; padding: 3px 0; }
-  .rb-row.rb-total { color: #fff; font-weight: 600; border-top: 1px solid #4a4a3a; margin-top: 6px; padding-top: 8px; font-size: 14px; }
-  .rb-pos { color: #7cc955; }
-  .rb-neg { color: #e09a55; }
+  .perf-bar-labels { display: flex; justify-content: space-between; font-size: 10px; color: #9aacb8; margin-bottom: 3px; }
+  .perf-bar-track { position: relative; height: 10px; background: #edf2f5; border-radius: 5px; overflow: hidden; }
+  .perf-bar-left { position: absolute; top: 0; right: 50%; height: 100%; background: #e8a84b; border-radius: 5px 0 0 5px; width: 0; transition: width 0.3s ease; }
+  .perf-bar-right { position: absolute; top: 0; left: 50%; height: 100%; background: #5a9e3a; border-radius: 0 5px 5px 0; width: 0; transition: width 0.3s ease; }
+  .perf-bar-mid { position: absolute; top: -2px; left: 50%; transform: translateX(-50%); width: 2px; height: 14px; background: #b0c0cc; border-radius: 1px; }
+  .perf-bar-pct { text-align: center; font-size: 12px; font-weight: 600; margin-top: 5px; }
   .footnote { font-size: 11px; color: #9aacb8; margin-top: 1rem; line-height: 1.6; }
 </style>
 
@@ -61,32 +58,42 @@
     <div class="section-label">Rounds per year at your facility</div>
     <div class="big-value" id="rounds-display">50,000</div>
     <input type="range" id="rounds-slider" min="1000" max="120000" value="50000" step="1" />
-    <div class="slider-ticks"><span>1,000</span><span>25,000</span><span>50,000</span><span>75,000</span><span>120,000</span></div>
+    <div class="slider-ticks"><span>1,000</span><span>30,000</span><span>60,000</span><span>90,000</span><span>120,000</span></div>
+
     <hr class="section-divider" />
-    <div class="product-grid">
+
+    <div class="product-stack">
       <div class="product-card">
-        <div class="pc-header"><span class="pc-icon">👟</span><span class="pc-title">Shoes</span></div>
-        <div class="pc-bench-label">Benchmark (40%)</div>
-        <div class="pc-bench-val" id="shoe-bench">202 <span style="font-size:14px;font-weight:400;color:#9aacb8">pairs</span></div>
-        <div class="pc-input-wrap"><input type="number" id="shoe-actual" placeholder="Pairs sold" min="0" /><span class="sfx">pairs</span></div>
+        <div class="pc-top">
+          <div class="pc-header"><span class="pc-icon">👟</span><span class="pc-title">Shoes</span></div>
+          <div class="pc-bench-block">
+            <div class="pc-bench-label">Benchmark (40%)</div>
+            <div class="pc-bench-val" id="shoe-bench">202 <span style="font-size:15px;font-weight:400;color:#9aacb8">pairs</span></div>
+          </div>
+        </div>
+        <div class="pc-input-wrap">
+          <input type="number" id="shoe-actual" placeholder="Enter pairs sold this year" min="0" />
+          <span class="sfx">pairs</span>
+        </div>
         <div id="shoe-badge"></div>
       </div>
+
       <div class="product-card">
-        <div class="pc-header"><span class="pc-icon">🧤</span><span class="pc-title">Gloves</span></div>
-        <div class="pc-bench-label">Benchmark (50%)</div>
-        <div class="pc-bench-val" id="glove-bench">1,068 <span style="font-size:14px;font-weight:400;color:#9aacb8">gloves</span></div>
-        <div class="pc-input-wrap"><input type="number" id="glove-actual" placeholder="Gloves sold" min="0" /><span class="sfx">gloves</span></div>
+        <div class="pc-top">
+          <div class="pc-header"><span class="pc-icon">🧤</span><span class="pc-title">Gloves</span></div>
+          <div class="pc-bench-block">
+            <div class="pc-bench-label">Benchmark (50%)</div>
+            <div class="pc-bench-val" id="glove-bench">1,068 <span style="font-size:15px;font-weight:400;color:#9aacb8">gloves</span></div>
+          </div>
+        </div>
+        <div class="pc-input-wrap">
+          <input type="number" id="glove-actual" placeholder="Enter gloves sold this year" min="0" />
+          <span class="sfx">gloves</span>
+        </div>
         <div id="glove-badge"></div>
       </div>
     </div>
-    <div class="result-panel">
-      <div class="rp-label">Summary — benchmark vs actual</div>
-      <div class="rp-cols">
-        <div class="rp-col"><div class="rc-label">Shoe benchmark</div><div class="rc-val" id="rp-shoe-bench">202</div><div class="rc-sub">pairs · 1 per 248 rounds</div></div>
-        <div class="rp-col"><div class="rc-label">Glove benchmark</div><div class="rc-val" id="rp-glove-bench">1,068</div><div class="rc-sub">gloves · 1 per 47 rounds</div></div>
-      </div>
-      <div class="rb" id="rb-breakdown"></div>
-    </div>
+
     <p class="footnote">Shoes: 1 pair per 99 rounds industry-wide, green grass 40% share (1 per 248 rounds). Gloves: 1 glove per 23.4 rounds industry-wide, green grass 50% share (1 per 47 rounds). Based on 2024 AU data.</p>
   </div>
 </div>
@@ -102,53 +109,69 @@ const shoeActual = document.getElementById('shoe-actual');
 const gloveActual = document.getElementById('glove-actual');
 const shoeBadge = document.getElementById('shoe-badge');
 const gloveBadge = document.getElementById('glove-badge');
-const rpShoeBench = document.getElementById('rp-shoe-bench');
-const rpGloveBench = document.getElementById('rp-glove-bench');
-const rbBreakdown = document.getElementById('rb-breakdown');
+
 function fmt(n) { return Math.round(n).toLocaleString(); }
+
 function makeBadge(actual, bench, unit) {
-  if (!actual || isNaN(actual) || actual <= 0) return '';
+  const emptyBar = `<div class="perf-bar-labels"><span>-100%</span><span>0%</span><span>+100%</span></div>
+    <div class="perf-bar-track">
+      <div class="perf-bar-left" style="width:0"></div>
+      <div class="perf-bar-right" style="width:0"></div>
+      <div class="perf-bar-mid"></div>
+    </div>
+    <div class="perf-bar-pct" style="color:#9aacb8">enter actual to compare</div>`;
+
+  if (!actual || isNaN(actual) || actual <= 0) return emptyBar;
+
   const diff = actual - bench;
-  if (diff > 0) return `<div class="status-badge badge-above"><div class="badge-dot"></div>+${fmt(diff)} ${unit} above</div>`;
-  if (diff < 0) return `<div class="status-badge badge-below"><div class="badge-dot"></div>${fmt(Math.abs(diff))} ${unit} below</div>`;
-  return `<div class="status-badge badge-above"><div class="badge-dot"></div>Right on target</div>`;
+  const pct = bench > 0 ? Math.round((diff / bench) * 100) : 0;
+  const capped = Math.min(Math.max(Math.abs(pct), 0), 100);
+  let badge = '', leftW = 0, rightW = 0;
+
+  if (diff > 0) {
+    badge = `<div class="status-badge badge-above"><div class="badge-dot"></div>+${fmt(diff)} ${unit} above benchmark</div>`;
+    rightW = capped;
+  } else if (diff < 0) {
+    badge = `<div class="status-badge badge-below"><div class="badge-dot"></div>${fmt(Math.abs(diff))} ${unit} below benchmark</div>`;
+    leftW = capped;
+  } else {
+    badge = `<div class="status-badge badge-above"><div class="badge-dot"></div>Right on target</div>`;
+  }
+
+  const pctColor = diff >= 0 ? '#3a7a1a' : '#a05a10';
+  const pctLabel = diff > 0 ? `+${pct}% vs benchmark` : diff < 0 ? `${pct}% vs benchmark` : `0% — right on benchmark`;
+
+  return `${badge}
+    <div class="perf-bar-labels"><span>-100%</span><span>0%</span><span>+100%</span></div>
+    <div class="perf-bar-track">
+      <div class="perf-bar-left" style="width:${leftW}%"></div>
+      <div class="perf-bar-right" style="width:${rightW}%"></div>
+      <div class="perf-bar-mid"></div>
+    </div>
+    <div class="perf-bar-pct" style="color:${pctColor}">${pctLabel}</div>`;
 }
+
 function updateSliderBg() {
   const min = parseInt(slider.min), max = parseInt(slider.max), val = parseInt(slider.value);
   const pct = ((val - min) / (max - min)) * 100;
   slider.style.background = `linear-gradient(to right, #4a8fa8 0%, #4a8fa8 ${pct}%, #c8d8e0 ${pct}%, #c8d8e0 100%)`;
 }
+
 function update() {
   const rounds = parseInt(slider.value);
   const sb = Math.round(rounds / SHOE_BENCH_ROUNDS);
   const gb = Math.round(rounds / GLOVE_BENCH_ROUNDS);
   const sa = parseInt(shoeActual.value);
   const ga = parseInt(gloveActual.value);
+
   roundsDisplay.textContent = fmt(rounds);
-  shoeBenchEl.innerHTML = `${fmt(sb)} <span style="font-size:14px;font-weight:400;color:#9aacb8">pairs</span>`;
-  gloveBenchEl.innerHTML = `${fmt(gb)} <span style="font-size:14px;font-weight:400;color:#9aacb8">gloves</span>`;
-  rpShoeBench.textContent = fmt(sb);
-  rpGloveBench.textContent = fmt(gb);
+  shoeBenchEl.innerHTML = `${fmt(sb)} <span style="font-size:15px;font-weight:400;color:#9aacb8">pairs</span>`;
+  gloveBenchEl.innerHTML = `${fmt(gb)} <span style="font-size:15px;font-weight:400;color:#9aacb8">gloves</span>`;
   updateSliderBg();
   shoeBadge.innerHTML = makeBadge(sa, sb, 'pairs');
   gloveBadge.innerHTML = makeBadge(ga, gb, 'gloves');
-  const hasShoe = sa && !isNaN(sa) && sa > 0;
-  const hasGlove = ga && !isNaN(ga) && ga > 0;
-  let rows = `<div class="rb-row"><span>Rounds per year</span><span>${fmt(rounds)}</span></div>`;
-  if (hasShoe) {
-    const diff = sa - sb; const cls = diff >= 0 ? 'rb-pos' : 'rb-neg';
-    rows += `<div class="rb-row"><span>Shoe benchmark</span><span>${fmt(sb)} pairs</span></div>`;
-    rows += `<div class="rb-row"><span>Shoes sold</span><span>${fmt(sa)} pairs</span></div>`;
-    rows += `<div class="rb-row rb-total"><span>Shoe variance</span><span class="${cls}">${diff >= 0 ? '+' : ''}${fmt(diff)} pairs</span></div>`;
-  } else { rows += `<div class="rb-row"><span>Shoe benchmark (40%)</span><span>${fmt(sb)} pairs</span></div>`; }
-  if (hasGlove) {
-    const diff = ga - gb; const cls = diff >= 0 ? 'rb-pos' : 'rb-neg';
-    rows += `<div class="rb-row" style="margin-top:8px"><span>Glove benchmark</span><span>${fmt(gb)} gloves</span></div>`;
-    rows += `<div class="rb-row"><span>Gloves sold</span><span>${fmt(ga)} gloves</span></div>`;
-    rows += `<div class="rb-row rb-total"><span>Glove variance</span><span class="${cls}">${diff >= 0 ? '+' : ''}${fmt(diff)} gloves</span></div>`;
-  } else { rows += `<div class="rb-row"><span>Glove benchmark (50%)</span><span>${fmt(gb)} gloves</span></div>`; }
-  rbBreakdown.innerHTML = rows;
 }
+
 slider.addEventListener('input', update);
 shoeActual.addEventListener('input', update);
 gloveActual.addEventListener('input', update);
