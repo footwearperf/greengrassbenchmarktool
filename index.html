@@ -42,6 +42,11 @@
   .perf-bar-mid { position: absolute; top: -2px; left: 50%; transform: translateX(-50%); width: 2px; height: 14px; background: #b0c0cc; border-radius: 1px; }
   .perf-bar-pct { text-align: center; font-size: 12px; font-weight: 600; margin-top: 5px; }
   .footnote { font-size: 11px; color: #9aacb8; margin-top: 1rem; line-height: 1.6; }
+  .playbook-panel { display: none; background: #3a3a2e; border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1rem; }
+  .playbook-panel.visible { display: block; }
+  .playbook-btn { display: block; width: 100%; padding: 0.75rem 1rem; background: #c8a84b; color: #1a1a0e; font-size: 15px; font-weight: 700; border: none; border-radius: 8px; cursor: pointer; text-align: center; text-decoration: none; margin-bottom: 0.85rem; letter-spacing: 0.02em; }
+  .playbook-btn:hover { background: #d9bc68; }
+  .playbook-desc { font-size: 12px; color: #aaa; line-height: 1.6; }
 </style>
 
 <div class="calc-wrap">
@@ -92,6 +97,11 @@
         </div>
         <div id="glove-badge"></div>
       </div>
+    </div>
+
+    <div class="playbook-panel" id="playbook-panel">
+      <a class="playbook-btn" href="https://indd.adobe.com/view/85fa2eb1-4150-4dff-b75b-0bb6125b520f" target="_blank" rel="noopener">Improve Sell Through</a>
+      <p class="playbook-desc">The Stockist Playbook offers staff training, merchandising tips, and advertising content which has proven to help increase golf shop product sales.</p>
     </div>
 
     <p class="footnote">Shoes: 1 pair per 99 rounds industry-wide, green grass 40% share (1 per 248 rounds). Gloves: 1 glove per 23.4 rounds industry-wide, green grass 50% share (1 per 47 rounds). Based on 2024 AU data.</p>
@@ -170,6 +180,15 @@ function update() {
   updateSliderBg();
   shoeBadge.innerHTML = makeBadge(sa, sb, 'pairs');
   gloveBadge.innerHTML = makeBadge(ga, gb, 'gloves');
+
+  const shoeBelow = sa && !isNaN(sa) && sa > 0 && sa < sb;
+  const gloveBelow = ga && !isNaN(ga) && ga > 0 && ga < gb;
+  const panel = document.getElementById('playbook-panel');
+  if (shoeBelow || gloveBelow) {
+    panel.classList.add('visible');
+  } else {
+    panel.classList.remove('visible');
+  }
 }
 
 slider.addEventListener('input', update);
