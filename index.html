@@ -1,3 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Green Grass Sales Benchmark Tool</title>
+<style>
+  html, body {
+    margin: 0; padding: 0;
+    min-height: 100vh;
+    background: #dce8f0;
+    background-image: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    font-family: sans-serif;
+  }
+  .page-wrap {
+    width: 100%;
+    max-width: 800px;
+  }
+</style>
+</head>
+<body>
+<div class="page-wrap">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   .calc-wrap { background: #dce8f0; padding: 1rem; font-family: sans-serif; max-width: 800px; }
@@ -70,9 +96,9 @@
     <div class="product-stack">
       <div class="product-card">
         <div class="pc-top">
-          <div class="pc-header"><span class="pc-icon">👟</span><span class="pc-title">Shoes</span></div>
+          <div class="pc-header"><span class="pc-icon"><img src="https://www.footjoy.com.au/dw/image/v2/AAZW_PRD/on/demandware.static/-/Sites-footjoy-master/default/dwafbf6b83/FJ_56949_sw.png" alt="FJ Shoe" style="width:32px;height:32px;object-fit:contain;display:block;" /></span><span class="pc-title">Shoes</span></div>
           <div class="pc-bench-block">
-            <div class="pc-bench-label">Benchmark (40%)</div>
+            <div class="pc-bench-label">Benchmark (33%)</div>
             <div class="pc-bench-val" id="shoe-bench">202 <span style="font-size:15px;font-weight:400;color:#9aacb8">pairs</span></div>
           </div>
         </div>
@@ -85,9 +111,9 @@
 
       <div class="product-card">
         <div class="pc-top">
-          <div class="pc-header"><span class="pc-icon">🧤</span><span class="pc-title">Gloves</span></div>
+          <div class="pc-header"><span class="pc-icon"><img src="https://www.footjoy.com.au/dw/image/v2/AAZW_PRD/on/demandware.static/-/Sites-footjoy-master/default/dwabbd526e/FJ_66770-301_sw.png" alt="FJ Glove" style="width:32px;height:32px;object-fit:contain;display:block;" /></span><span class="pc-title">Gloves</span></div>
           <div class="pc-bench-block">
-            <div class="pc-bench-label">Benchmark (50%)</div>
+            <div class="pc-bench-label">Benchmark (46%)</div>
             <div class="pc-bench-val" id="glove-bench">1,068 <span style="font-size:15px;font-weight:400;color:#9aacb8">gloves</span></div>
           </div>
         </div>
@@ -104,13 +130,13 @@
       <p class="playbook-desc">The FJ Stockist Playbook offers staff training, merchandising tips, and advertising content which has proven to help increase golf shop product sales.</p>
     </div>
 
-    <p class="footnote">Shoes: 1 pair per 99 rounds industry-wide, green grass 40% share (1 per 248 rounds). Gloves: 1 glove per 23.4 rounds industry-wide, green grass 50% share (1 per 47 rounds). Based on 2024 AU data.</p>
+    <p class="footnote">Shoes: 1 pair per 99 rounds industry-wide, green grass 33% share (1 per 300 rounds). Gloves: 1 glove per 23.4 rounds industry-wide, green grass 46% share (1 per 51 rounds). Sourced from independent research (2 year average of Pro Shop share of category sales), industry sales data and Acushnet sales data throughout 2024-2025 (total market size &amp; rounds of golf).</p>
   </div>
 </div>
 
 <script>
-const SHOE_BENCH_ROUNDS = Math.round(99 / 0.40);
-const GLOVE_BENCH_ROUNDS = Math.round(23.4 / 0.50);
+const SHOE_BENCH_ROUNDS = Math.round(99 / 0.33);
+const GLOVE_BENCH_ROUNDS = Math.round(23.4 / 0.46);
 const slider = document.getElementById('rounds-slider');
 const roundsDisplay = document.getElementById('rounds-display');
 const shoeBenchEl = document.getElementById('shoe-bench');
@@ -196,3 +222,6 @@ shoeActual.addEventListener('input', update);
 gloveActual.addEventListener('input', update);
 update();
 </script>
+</div>
+</body>
+</html>
